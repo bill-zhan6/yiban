@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>后台</title>
+		<!-- 定义视口 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="__IMG__/css/bootstrap.min.css" />
+
+		<script src="__IMG__/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__IMG__/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style>
+		.navbar {
+			padding-left: 100px;
+			color: #FFFFFF;
+		}
+		
+		.search {
+			padding-right: 150px;
+			float: left;
+		}
+		
+		.container {
+			width: 100%;
+			height: 800px;
+		}
+		
+		.aa {
+			width: 1250px;
+			height: 50px;
+			float: left;
+		}
+		
+		.aa h2 {
+			padding-left: 300px;
+			float: left;
+		}
+		
+		.form-group {
+			width: 200px;
+			margin: auto;
+			float: left;
+			padding-left: 20px;
+			padding-top: 3px;
+		}
+		
+		.list {
+			width: 150px;
+			height: 500px;
+			float: left;
+			background-color: #F2F7F8;
+		}
+		
+		.list #b {
+			width: 150px;
+			height: 50px;
+			float: left;
+			line-height: 50px;
+			text-align: center;
+		}
+		
+		.list #b:hover {
+			color: #999;
+		}
+	.biao{
+		width: 1080px;
+		height:500px;
+		float:left;
+		background: #F2F7F8;
+		text-align: center;
+	}
+	.biao tr{
+		color: #000000;
+	}
+	.biao td a{
+		color: #000000;
+	}
+	</style>
+
+	<body>
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-md bg-light navbar-info">
+				<a href="index.html" class="navbar-brand">一瓣yiban</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="{:url('dy')}" class="nav-link" style="color: #666699;">电影</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link" style="color:#D39E00;">音乐</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link" style="color:#491217;">读书 </a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link" style="color:#880000;">同城</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link" style="color: #138496;">小组</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link" style="color: #006666;">阅读</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link" style="color: #5BC0DE;">FM</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link" style="color: #C6C8CA;">时间</a>
+						</li>
+						<li class="nav-item">
+							<a href="{:url('index')}" class="nav-link" style="color: #23527C;">退出</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="aa">
+				<h2>信息管理</h2>
+				<form action="search" method="get" class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input name="cx" type="text" class="form-control" placeholder="Search">
+					</div>
+					<button name "tj" type="submit" class="btn btn-default">查询</button>
+				</form>
+			</div>
+
+			<div class="list">
+				<div id="b" class="glyphicon glyphicon-user">
+					<a href="{:url('db/public/index/news/ht')}"> 信息管理</a>
+				</div>
+				<div id="b" class="glyphicon glyphicon-ok">
+					<a href="{:url('db/public/index/news/add')}"> 发布内容</a>
+				</div>
+				<div id="b" class="glyphicon glyphicon-cloud">
+					<a href=""> 用户管理</a>
+				</div>
+				<div id="b" class="glyphicon glyphicon-repeat">
+					<a href="{:url('index')}"> 返回首页</a>
+				</div>
+				<div id="b" class="glyphicon glyphicon-pencil">
+					<a href=""> 自定义</a>
+				</div>
+			</div>
+			<div class="biao">
+  		<table class="table table-striped" style="text-align: center;">
+
+			<tr>
+				<td>ID</td>
+				<td>标题</td>
+				<td>操作</td>
+			</tr>
+			 {volist name="a" id="news" offset="0"}
+			<tr>
+				<td height="">{$news->getData("Id")|mb_substr=0,5,'utf-8'}</td>
+				<td height="">{$news->getData("title1")|mb_substr=0,5,'utf-8'}...</td>
+				<td>
+					<a href="{:url('index/News/update?id='.$news->getData("Id"))}">修改</a>
+					<a href="{:url('deletea?ida='.$news->  getData("Id"))}">删除</a>
+				</td>
+			</tr>
+			{/volist}
+		</table>
+		
+		<nav aria-label="..." style="margin-left:220px;">
+		  <ul class="pagination">
+		    {$a->render()}
+		  </ul>
+		</nav>
+
+  </div>
+		</div>
+	</body>
+
+</html>

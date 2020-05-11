@@ -1,0 +1,12 @@
+<?php
+namespace app\common\validate;
+use think\Validate;     // 内置验证类
+
+
+class News extends Validate
+{
+	protected $rule = [
+	'title1'=>'require|unique:news|length:4,25',
+	'content'=>'require|length:2,25',
+	];
+}

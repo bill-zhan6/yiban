@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>一瓣电影</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="__IMG__/css/bootstrap.min.css" />
+		<script src="__IMG__/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__IMG__/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="_IMG__/css/2.css" />
+	</head>
+	<style>
+		.navbar {
+			padding-left: 100px;
+			color: #FFFFFF;
+		}
+		
+		.search {
+			padding-right: 150px;
+			float: left;
+		}
+		
+		.form-group {
+			width: 180px;
+			margin: auto;
+		}
+		
+		.container {
+			width: 100%;
+			height: 800px;
+			float: left;
+		}
+		
+		.aa {
+			width: 100%;
+			height: 150px;
+			float: left;
+		}
+		
+		.ab {
+			width: 800px;
+			height: 100px;
+			float: left;
+		}
+		
+		.ab h3 {
+			float: left;
+			padding-left: 100px;
+			padding-top: 20px;
+			color: #3377AA;
+		}
+		
+		.search {
+			width: 500px;
+			height: 50px;
+			float: left;
+			padding-left: 60px;
+			padding-top: 20px;
+		}
+		
+		.ac {
+			width: 100%;
+			height: 50px;
+			float: left;
+		}
+		
+		.ac ul {
+			margin: auto;
+		}
+		
+		.ac ul li {
+			float: left;
+			list-style: none;
+			padding-left: 60px;
+			padding-top: 10px;
+		}
+		
+		.ac ul li a {
+			color: #2277AA;
+		}
+		
+		.ac ul li a:hover {
+			color: #004085;
+		}
+		
+		.ad {
+			width: 400px;
+			height: 100px;
+			float: left;
+		}
+		
+		.ad img {
+			width: 150px;
+			height: 100px;
+			float: left;
+		}
+		
+		.bb {
+			width: 1230px;
+			height: 600px;
+			float: left;
+		}
+		
+		.bba {
+			width: 900px;
+			height: 600px;
+			float: left;
+		}
+		
+		.qq {
+			width: 900px;
+			height: 100px;
+			float: left;
+		}
+		
+		.qq ul {
+			list-style: none;
+			padding-top: 60px;
+		}
+		
+		.qq h4 {
+			float: left;
+		}
+		
+		.qq ul li {
+			float: left;
+			margin: 5px 10px;
+		}
+		
+		.qq ul li a {
+			color: #9B9B9B;
+		}
+		
+		.qq ul li a:hover {
+			color: #004085;
+		}
+		
+		.ww {
+			width: 900px;
+			height: 500px;
+			float: left;
+			margin: 20px 10px;
+		}
+		
+		.col {
+			width: 150px;
+			height: 200px;
+			float: left;
+			margin-left: 40px;
+			margin: 20px 10px;
+			text-align: center;
+		}
+		
+		.col img {
+			float: left;
+			width: 115px;
+			height: 170px;
+			margin-top: 10px;
+		}
+		.col a{
+			color: #000000;
+			float: left;
+			padding-left:30px ;
+		}
+		.col p{
+			float: left;
+			color: #E09015;
+			text-align: center;
+		}
+		.bbb {
+			width: 330px;
+			height: 600px;
+			float: left;
+		}
+		.bbb .ti{
+			width: 330px;
+			height: 30px;
+			float: left;
+			background-color: #F2F7F8;
+		}
+		.bbb .ti h5{
+			float: left;
+		}
+		.bbb .ti small a{
+			float: left;
+			color:#666699;
+			padding-top: 7px;
+		}
+		.bbb .content{
+			height: 570px;
+			width: 330px;
+			float: left;
+		}
+		.bbe{
+			width: 330px;
+			height: 50px;
+			float: left;
+			margin-top:8px;
+		}
+		.bbe li{
+			list-style: none;
+			padding-top: 10px;
+			
+		}
+		.bbe li a{
+			color:#2277AA;
+		}
+		.ff{
+	margin: auto;
+	width: 1313px;
+	height: 200px;
+	float: left;
+	background-color:#ececec;
+	
+}
+.ff .f1{
+	margin: auto;
+	width: 1313px;
+	height: 200px;
+	float: left;
+}
+.ff .f1 ul a{
+	float: left;
+	list-style: none;
+	color: #d3d3d3;
+	margin: 0 10px;
+}
+.ff .f1 h7{
+	width:1313px;
+	margin: auto;
+	float: left;
+	padding-top: 10px;
+	color: #666;
+}
+	</style>
+
+	<body>
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="{:url('index')}" class="nav-link">一瓣</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link">音乐</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link">读书 </a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link">同城</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link">小组</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link">阅读</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link">FM</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link">时间</a>
+						</li>
+						<li class="nav-item">
+							<a href="{:url('ht')}" class="nav-link">登陆</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="aa">
+				<div class="ab">
+					<a href="">
+						<h3>一瓣电影</h3></a>
+					<div class="search">
+						<input type="text" class="form-control" placeholder="搜索电视剧/电影/综艺/影人">
+					</div>
+				</div>
+				<div class="ad">
+					 
+				</div>
+				<div class="ac">
+					<ul>
+						<li>
+							<a href="">影讯&购票</a>
+						</li>
+						<li>
+							<a href="">选电影</a>
+						</li>
+						<li>
+							<a href="">电视剧</a>
+						</li>
+						<li>
+							<a href="">排行榜</a>
+						</li>
+						<li>
+							<a href="">分类</a>
+						</li>
+						<li>
+							<a href="">影评</a>
+						</li>
+						<li>
+							<a href="">2019年度榜单</a>
+						</li>
+						<li>
+							<a href="">2019书影音报告</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bb">
+				<div class="bba">
+					<div class="qq">
+						<ul>
+							<h4>最近热门电影</h4>
+							<li>
+								<a href="">最新</a>
+							</li>
+							<li>
+								<a href="">豆瓣高分</a>
+							</li>
+							<li>
+								<a href="">冷门佳片</a>
+							</li>
+							<li>
+								<a href="">华语</a>
+							</li>
+							<li>
+								<a href="">欧美</a>
+							</li>
+							<li>
+								<a href="">韩国</a>
+							</li>
+							<li>
+								<a href="">日本</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="ww">
+						{volist name="a" id="dianying" offset="0" length='10'}
+						<div class="col">
+							<td><img src="/db/public/uploads/{$dianying.photoa}" alt="" class="img-fluid"></td>
+							<a href="">{$dianying->getData("title")}</a><p>{$dianying->getData("pf")}</p>
+						</div>
+						{/volist}
+					</div>
+
+				</div>
+
+				<div class="bbb">
+                      <div class="ti">
+                      	<h5>一周口碑榜</h5>
+						<small><a href="">更多榜单></a></small>
+                      </div>
+                      <div class="content">
+                      	{volist name="a" id="dianying" offset="0" length='10'}
+                      	  <div class="bbe">
+                      	  	 <li>
+                      	  	 	<a href="{$dianying->getData("content")}"><h7>{$dianying->getData("content")}</h7></a>
+                      	  	 </li>
+                      	  </div>
+                      	  {/volist}
+                      </div>
+				</div>
+			</div>
+			<div class="ff">
+				<div class="f1">
+					<ul>
+						<a href="">
+							<li>关于一瓣</li>
+						</a>
+						<a href="">
+							<li>|</li>
+						</a>
+						<a href="">
+							<li>联系我们</li>
+						</a>
+						<a href="">
+							<li>|</li>
+						</a>
+						<a href="">
+							<li>法律声明</li>
+						</a>
+						<a href="">
+							<li>|</li>
+						</a>
+						<a href="">
+							<li>帮助中心</li>
+						</a>
+						<a href="">
+							<li>|</li>
+						</a>
+						<a href="">
+							<li>移动应用</li>
+						</a>
+					</ul>
+					<h7>
+						<pre>      © 2005－2020 douban.com, all rights reserved 北京豆网科技有限公司</pre>
+						<pre>     京ICP证090015号 京ICP备11027288号 网络视听许可证0110418号</pre>
+						<pre>     京网文[2015]2026-368号  京公网安备11010502000728  新出网证(京)字129号</pre>
+						<pre>     违法和不良信息举报电话：4008353331-9 </pre>
+						<pre>     中国互联网举报中心 电话：12377 新出发京批字第直160029号</pre>
+					</h7>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
